@@ -1,6 +1,12 @@
 class UsersController < ApplicationController
     def new
-        @user= User.new
+        user = session[:user_id]
+        binding.pry
+        if user then
+            @user= User.new
+    
+        end
+    
     end
     def view
         @user = User.find(params[:id])
