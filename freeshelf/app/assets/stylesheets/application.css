@@ -13,3 +13,54 @@
  *= require_tree .
  *= require_self
  */
+
+ 
+.freeshelf{
+    margin: 0 auto;
+    font-size: 4rem
+}
+
+.version{
+    margin: 0 auto;
+    font-size: 3rem;
+}
+
+.freeshelf, .version{
+
+    text-align: center;
+}
+.hero{
+    
+    
+    display: block;
+    margin: 0 auto;
+    margin-top: 15%;
+    width: 50%;
+   
+}
+.hero-link{
+    overflow: auto;
+   
+    
+    
+}
+.login, .sign-up{
+    padding: 0;
+    margin:0;
+    float:left;
+    text-align: center;
+    width: 50%;
+    font-size: 2rem;
+   
+}
+ .form-container{
+
+    margin:0 auto;
+    width: 50%;
+    border: 1px solid black;
+    padding: 10px;
+ }
+ .form-user-header{
+    text-align: center;
+
+ }

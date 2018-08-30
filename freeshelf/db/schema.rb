@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_27_171208) do
+ActiveRecord::Schema.define(version: 2018_08_30_021732) do
 
   create_table "books", force: :cascade do |t|
     t.string "title"
@@ -19,6 +19,31 @@ ActiveRecord::Schema.define(version: 2018_08_27_171208) do
     t.string "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
+  end
+
+  create_table "booktrackers", force: :cascade do |t|
+    t.integer "book_id"
+    t.integer "user_id"
+    t.string "title"
+    t.string "author"
+    t.date "checkout"
+    t.date "checkin"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "usertype"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "user_name"
+    t.string "password_digest"
+    t.string "password_confirmation"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["user_name"], name: "index_users_on_user_name", unique: true
   end
 
 end

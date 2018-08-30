@@ -1,0 +1,2 @@
+class Booktracker < ApplicationRecord
+end
